@@ -6,9 +6,9 @@ const boulderButton = document.getElementById('boulder-button');
 const shedContainer = document.getElementById('shed-container');
 const treeContainer = document.getElementById('tree-container');
 const boulderContainer = document.getElementById('boulder-container');
-let totalEl = document.getElementById('total');
-let lossesEl = document.getElementById('losses');
-let winsEl = document.getElementById('wins');
+const totalEl = document.getElementById('total');
+const lossesEl = document.getElementById('losses');
+const winsEl = document.getElementById('wins');
 const resetNow = document.getElementById('reset-now');
 
 const hidingPlaces = ['tree', 'shed', 'boulder'];
