@@ -11,14 +11,7 @@ const lossesEl = document.getElementById('losses');
 const winsEl = document.getElementById('wins');
 const resetNow = document.getElementById('reset-now');
 
-
 const hidingPlaces = ['tree', 'shed', 'boulder'];
-
-
-let correctGuesses = 1;
-let totalGuesses = 1;
-let incorrectGuesses = 1;
-
 
 shedButton.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * 3);
@@ -38,17 +31,27 @@ boulderButton.addEventListener('click', () => {
     handleGuess(answer, 'boulder');
 });
 
-
 function handleGuess(correctSpot, userGuess) {
-    totalEl.textContent = totalGuesses++;
+    resetStyles();
     const correctEl = document.getElementById(correctSpot + '-container');
     correctEl.classList.add('face');
     if (userGuess === correctSpot) {
-        winsEl.textContent = correctGuesses++;    
+        winsEl.textContent++;
     } else {
-        lossesEl.textContent = incorrectGuesses++;
+        lossesEl.textContent++;
     }
-    resetNow.addEventListener('click', () => {
-        correctEl.classList.remove('face');
-    });
+    totalEl.textContent++;
 }
+
+function resetStyles() {
+    treeContainer.classList.remove('face');
+    boulderContainer.classList.remove('face');
+    shedContainer.classList.remove('face');
+}
+
+resetNow.addEventListener('click', () => {
+    resetStyles();
+    winsEl.textContent = 0;
+    lossesEl.textContent = 0;
+    totalEl.textContent = 0;
+});
