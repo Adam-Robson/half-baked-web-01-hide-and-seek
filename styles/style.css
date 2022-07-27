@@ -1,9 +1,9 @@
 body {
-    --color1: hsla(159, 100%, 92%, 1);
-    --color2: hsla(130, 93%, 83%, 1);
-    --color3: hsla(123, 48%, 70%, 1);
-    --color4: hsla(160, 26%, 58%, 1);
-    --color5: hsla(153, 38%, 25%, 1);
+    --color1: rgb(248, 215, 255);
+    --color2: rgb(176, 122, 120);
+    --color3: rgb(202, 218, 135);
+    --color4: rgb(252, 195, 171);
+    --color5: rgb(246, 255, 209);
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.45);
     --gutter: 30px;
@@ -34,6 +34,7 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    color: rgb(106, 84, 54);
 }
 
 header {
